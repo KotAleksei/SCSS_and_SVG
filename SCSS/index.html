@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SCSS</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h1>SCSS practise</h1>
+											<!-- Task 1 -->
+	<h2>Task 1</h2>
+	<div class="first_task">
+		<div class="first_task__element1">
+			<div class="first_task__element1--red">Red</div>
+			<div class="first_task__element1--red--50"></div>
+			<div class="first_task__element1--red--100"></div>
+			<div class="first_task__element1--red--200"></div>
+			<div class="first_task__element1--red--300"></div>
+			<div class="first_task__element1--red--400"></div>
+			<div class="first_task__element1--red--500"></div>
+			<div class="first_task__element1--red--600"></div>
+			<div class="first_task__element1--red--700"></div>
+			<div class="first_task__element1--red--800"></div>
+			<div class="first_task__element1--red--900"></div>
+		</div>
+		<div class="first_task__element2">
+			<div class="first_task__element2--pink">pink</div>
+			<div class="first_task__element2--pink--50"></div>
+			<div class="first_task__element2--pink--100"></div>
+			<div class="first_task__element2--pink--200"></div>
+			<div class="first_task__element2--pink--300"></div>
+			<div class="first_task__element2--pink--400"></div>
+			<div class="first_task__element2--pink--500"></div>
+			<div class="first_task__element2--pink--600"></div>
+			<div class="first_task__element2--pink--700"></div>
+			<div class="first_task__element2--pink--800"></div>
+			<div class="first_task__element2--pink--900"></div>
+		</div>
+	</div>
+
+											<!-- Task 2 -->
+	<h2>Task 2</h2>
+	<div class="task2_palitra">
+		<div class="task2_palitra__dark">dark primary</div>
+		<div class="task2_palitra__light"> light primary</div>
+		<div class="task2_palitra__primary">primary</div>		
+		<div class="task2_palitra__secondary-text--primary-text">text/icons</div>
+		<div class="task2_palitra__accent">accent</div>
+		<div class="task2_palitra__secondary-text--primary-text">primary text</div>
+		<div class="task2_palitra__secondary-text">secondary-text</div>
+		<div class="task2_palitra__secondary-text--divider-color">divider-color</div>
+	</div>
+
+											<!-- Task 3 -->
+	<h2>Task 3</h2>
+	<div class="task3_typografic">
+		<p class="task3_typografic__some_text--normal--4">Lorem ipsum dolor sit amet</p>
+		<p class="task3_typografic__some_text--normal--3">Lorem ipsum dolor sit amet</p>
+		<p class="task3_typografic__some_text--normal--2">Lorem ipsum dolor sit amet</p>
+		<p class="task3_typografic__some_text--normal--1">Lorem ipsum dolor sit amet</p>
+		<p class="task3_typografic__some_text--normal--0">Lorem ipsum dolor sit amet</p>
+		<p class="task3_typografic__some_text--min--1">Lorem ipsum dolor sit amet</p>
+		<p class="task3_typografic__some_text--min--2">Lorem ipsum dolor sit amet</p>
+		<p class="task3_typografic__some_text--min--3">Lorem ipsum dolor sit amet</p>
+	</div>
+
+											<!-- Task 4 -->
+	<h2>Task 4</h2>
+	<div class="task4">
+		<h3>Choose a comfortable measure</h3>
+	<span class="citate">“Anything from 45 to 75 characters is widely regarded as a satisfactory length of line for a single-column page set in a serifed text face in a text size. The 66-character line (counting both letters and spaces) is widely regarded as ideal. For multiple column work, a better average is 40 to 50 characters.”</span> <br>
+<span>
+The measure is the number of characters in a single line of a column of text. HTML doesn’t have a concept of columns per se, instead text is held within boxes. In CSS the width of a box is set using the width property with any unit of length, for example:
+<span class="kod">
+#col1 {
+  width: 400px;
+}
+
+#col2 {
+  width: 50%;
+}
+
+#col3 {
+  width:33em;
+}
+</span>
+<span>
+When typographers set the measure and text size for printed media, those dimensions are fixed and unchangeable in their physical manifestation. In this regard, the Web as viewed on-screen is fundamentally different to print because the medium is far more under the control of your readers. In particular, if your reader wishes to change the text size or the dimensions of the ‘page’, they can do. 
+</span>
+<br>
+<span>
+In the preceding example, column 1 has a fixed width: it has been set to 400 px wide. With text rendering at 12 px this would result in a measure of approximately 66 characters per line. If your reader increases the text size to 16 px then the measure reduces to 50 characters per line. Thus when the text size is changed, so the measure changes.
+</span>
+<br>
+<span>
+Column 2 has a liquid width: it has been set to 50% wide. Assuming your reader is browsing with a window 1000 px wide, the box would be rendered as 500 px wide, resulting in a measure of about 83 characters per line. A measure of 83 may be a little too wide for your reader, but because the box is liquid, your reader could reduce their window size to 800 px, thus narrowing the box to 400 px and creating a more comfortable measure of 66 characters per line.
+</span>
+<br>
+<span>
+Column 3 has an elastic width: it has been set to 33 em wide. On average one character takes up 0.5 em so this box will have a measure of 66 characters per line. If your reader increases the text size, the width of box will increase accordingly and so the measure remains at 66 regardless of the text size.
+</span>
+<br>
+<span>
+From a typographical perspective, the most appropriate method is to set box width in ems (elastic layout) as it ensures the measure is always set to the typographer’s specification. Setting box width as a percentage (liquid layout) gives the typographer approximate control over measure but also allows the reader to adjust the layout to suit their comfort. This website has been designed with liquid layout to afford readers this control.
+</span>
+<br>
+<span>
+Relinquishing such control makes some designers quake in their boots, but the beauty and advantage of the Web as a medium is that readers are able to adjust their reading environment to suit their own needs. This is a concept that should be acknowledged & embraced, and built into website designs from the ground up.
+</span>
+</span>
+	</div>
+</body>
+</html>

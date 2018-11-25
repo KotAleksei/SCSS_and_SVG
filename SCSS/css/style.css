@@ -1,0 +1,486 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+
+h5 {
+  text-align: center;
+}
+
+h6 {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.first_task {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Первый способ */
+/* Делаем светлее с пом. ф-и lighten */
+.first_task__element1--red--50 {
+  background-color: #fef2f1;
+}
+.first_task__element1--red--50:before {
+  content: "50";
+}
+.first_task__element1--red--50:after {
+  content: "#fef2f1";
+}
+
+.first_task__element1--red--100 {
+  background-color: #fee6e4;
+}
+.first_task__element1--red--100:before {
+  content: "100";
+}
+.first_task__element1--red--100:after {
+  content: "#fee6e4";
+}
+
+.first_task__element1--red--200 {
+  background-color: #fbbdb9;
+}
+.first_task__element1--red--200:before {
+  content: "200";
+}
+.first_task__element1--red--200:after {
+  content: "#fbbdb9";
+}
+
+.first_task__element1--red--300 {
+  background-color: #f9948d;
+}
+.first_task__element1--red--300:before {
+  content: "300";
+}
+.first_task__element1--red--300:after {
+  content: "#f9948d";
+}
+
+.first_task__element1--red--400 {
+  background-color: #f66c62;
+}
+.first_task__element1--red--400:before {
+  content: "400";
+}
+.first_task__element1--red--400:after {
+  content: "#f66c62";
+}
+
+/* Делаем темнее с пом. ф-и darken */
+.first_task__element1--red--500 {
+  background-color: #f44336;
+}
+.first_task__element1--red--500:before {
+  content: "500";
+  color: white;
+}
+.first_task__element1--red--500:after {
+  content: "#f44336";
+  color: white;
+}
+
+.first_task__element1--red--600 {
+  background-color: #ef1d0d;
+}
+.first_task__element1--red--600:before {
+  content: "600";
+  color: white;
+}
+.first_task__element1--red--600:after {
+  content: "#ef1d0d";
+  color: white;
+}
+
+.first_task__element1--red--700 {
+  background-color: #c4170b;
+}
+.first_task__element1--red--700:before {
+  content: "700";
+  color: white;
+}
+.first_task__element1--red--700:after {
+  content: "#c4170b";
+  color: white;
+}
+
+.first_task__element1--red--800 {
+  background-color: #981208;
+}
+.first_task__element1--red--800:before {
+  content: "800";
+  color: white;
+}
+.first_task__element1--red--800:after {
+  content: "#981208";
+  color: white;
+}
+
+.first_task__element1--red--900 {
+  background-color: #6c0d06;
+}
+.first_task__element1--red--900:before {
+  content: "900";
+  color: white;
+}
+.first_task__element1--red--900:after {
+  content: "#6c0d06";
+  color: white;
+}
+
+.first_task__element1--red {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  width: 100%;
+  height: 55px;
+  background-color: #F44336;
+  height: 100px;
+  margin-bottom: 5px;
+}
+.first_task__element1--red:after {
+  content: "#F44336";
+}
+
+.first_task__element1 {
+  width: 40%;
+}
+
+.first_task__element1 > div:not(:first-child) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  width: 100%;
+  height: 55px;
+}
+
+/* Второй способ */
+.first_task__element2--pink--50 {
+  background-color: #fbd2e0;
+}
+.first_task__element2--pink--50:before {
+  content: "50";
+}
+.first_task__element2--pink--50:after {
+  content: "#fbd2e0";
+}
+
+.first_task__element2--pink--100 {
+  background-color: #f9c5d7;
+}
+.first_task__element2--pink--100:before {
+  content: "100";
+}
+.first_task__element2--pink--100:after {
+  content: "#f9c5d7";
+}
+
+.first_task__element2--pink--200 {
+  background-color: #f59bba;
+}
+.first_task__element2--pink--200:before {
+  content: "200";
+}
+.first_task__element2--pink--200:after {
+  content: "#f59bba";
+}
+
+.first_task__element2--pink--300 {
+  background-color: #f1729d;
+}
+.first_task__element2--pink--300:before {
+  content: "300";
+}
+.first_task__element2--pink--300:after {
+  content: "#f1729d";
+}
+
+.first_task__element2--pink--400 {
+  background-color: #ed4880;
+}
+.first_task__element2--pink--400:before {
+  content: "400";
+}
+.first_task__element2--pink--400:after {
+  content: "#ed4880";
+}
+
+.first_task__element2--pink--500 {
+  background-color: #e91e63;
+}
+.first_task__element2--pink--500:before {
+  content: "500";
+  color: #fff;
+}
+.first_task__element2--pink--500:after {
+  content: "#e91e63";
+  color: #fff;
+}
+
+.first_task__element2--pink--600 {
+  background-color: #c61350;
+}
+.first_task__element2--pink--600:before {
+  content: "600";
+  color: #fff;
+}
+.first_task__element2--pink--600:after {
+  content: "#c61350";
+  color: #fff;
+}
+
+.first_task__element2--pink--700 {
+  background-color: #9c0f3f;
+}
+.first_task__element2--pink--700:before {
+  content: "700";
+  color: #fff;
+}
+.first_task__element2--pink--700:after {
+  content: "#9c0f3f";
+  color: #fff;
+}
+
+.first_task__element2--pink--800 {
+  background-color: #720b2e;
+}
+.first_task__element2--pink--800:before {
+  content: "800";
+  color: #fff;
+}
+.first_task__element2--pink--800:after {
+  content: "#720b2e";
+  color: #fff;
+}
+
+.first_task__element2--pink--900 {
+  background-color: #48071d;
+}
+.first_task__element2--pink--900:before {
+  content: "900";
+  color: #fff;
+}
+.first_task__element2--pink--900:after {
+  content: "#48071d";
+  color: #fff;
+}
+
+.first_task__element2--pink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  width: 100%;
+  height: 55px;
+  background-color: #e91e63;
+  height: 100px;
+  margin-bottom: 5px;
+}
+.first_task__element2--pink:after {
+  content: "#e91e63";
+}
+
+.first_task__element2 {
+  width: 40%;
+}
+
+.first_task__element2 > div:not(:first-child) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  width: 100%;
+  height: 55px;
+}
+
+/* Task 2 */
+.task2_palitra__primary {
+  background-color: #CDDC39;
+}
+.task2_palitra__primary:before {
+  content: "#CDDC39";
+}
+.task2_palitra__dark {
+  background-color: #a2af1f;
+}
+.task2_palitra__dark:before {
+  content: "#a2af1f";
+}
+.task2_palitra__light {
+  background-color: #dbe671;
+}
+.task2_palitra__light:before {
+  content: "#dbe671";
+}
+.task2_palitra__secondary-text {
+  background-color: #757575;
+  color: #fff;
+}
+.task2_palitra__secondary-text:before {
+  content: "#757575";
+}
+.task2_palitra__secondary-text--primary-text {
+  background-color: #212121;
+  color: #fff;
+}
+.task2_palitra__secondary-text--primary-text:before {
+  content: "#212121";
+}
+.task2_palitra__secondary-text--divider-color {
+  background-color: #bdbdbd;
+  color: #fff;
+}
+.task2_palitra__secondary-text--divider-color:before {
+  content: "#bdbdbd";
+}
+.task2_palitra__accent {
+  background-color: #448AFF;
+  color: #fff;
+}
+.task2_palitra__accent:before {
+  content: "#448AFF";
+}
+
+.task2_palitra {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+.task2_palitra > div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 25%;
+  height: 100px;
+  text-transform: uppercase;
+}
+
+.task2_palitra > div:before {
+  padding-bottom: 70px;
+  padding-left: 10px;
+}
+
+/* Task 3 */
+html {
+  font-size: 20px;
+}
+
+.task3_typografic__some_text--normal--4 {
+  font-size: 3rem;
+}
+.task3_typografic__some_text--normal--4:before {
+  content: "3rem";
+  padding-right: 10px;
+}
+.task3_typografic__some_text--normal--3 {
+  font-size: 2rem;
+}
+.task3_typografic__some_text--normal--3:before {
+  content: "2rem";
+  padding-right: 10px;
+}
+.task3_typografic__some_text--normal--2 {
+  font-size: 1.5rem;
+}
+.task3_typografic__some_text--normal--2:before {
+  content: "1.5rem";
+  padding-right: 10px;
+}
+.task3_typografic__some_text--normal--1 {
+  font-size: 1.2rem;
+}
+.task3_typografic__some_text--normal--1:before {
+  content: "1.2rem";
+  padding-right: 10px;
+}
+.task3_typografic__some_text--normal--0 {
+  font-size: 1rem;
+}
+.task3_typografic__some_text--normal--0:before {
+  content: "1rem";
+  padding-right: 10px;
+}
+.task3_typografic__some_text--min--1 {
+  font-size: 0.75rem;
+}
+.task3_typografic__some_text--min--1:before {
+  content: "0.75rem";
+  padding-right: 10px;
+}
+.task3_typografic__some_text--min--2 {
+  font-size: 0.56rem;
+}
+.task3_typografic__some_text--min--2:before {
+  content: "0.56rem";
+  padding-right: 10px;
+}
+.task3_typografic__some_text--min--3 {
+  font-size: 0.42rem;
+}
+.task3_typografic__some_text--min--3:before {
+  content: "0.42rem";
+  padding-right: 10px;
+}
+
+/* Ф-я map-get бере значение от ключа в масиве $anySize  
+значение value от -3 до 4 (в этом примере)
+*/
+/* Task 4*/
+.task4 {
+  font-size: 1.2rem;
+  width: 70%;
+  max-width: 800px;
+  min-width: 300px;
+  margin: 0 auto;
+  background-color: #CDDC39;
+  padding: 5px;
+}
+.task4 span {
+  display: block;
+  text-indent: 1.5em;
+}
+
+.citate {
+  font-style: italic;
+}
+
+.kod {
+  display: block;
+  padding-left: 20px;
+  white-space: pre;
+}
+
+/*# sourceMappingURL=style.css.map */

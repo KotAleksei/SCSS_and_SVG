@@ -1,0 +1,298 @@
+* {
+	box-sizing: border-box;
+}
+@mixin clear() {
+	margin: 0;
+	padding: 0;
+}
+
+@for $i from 1 through 6 {
+	h#{$i} {
+		text-align: center;
+	}
+}
+
+body {
+	@include clear;
+	width: 100%;
+}
+
+@mixin position_first_task_child() {
+	display: flex;
+	justify-content: space-between; 
+	align-items: center;
+	text-transform: uppercase;
+	width: 100%;
+	height: 55px;
+}
+
+@mixin first_task_main_child() {
+	@include position_first_task_child;
+	background-color: $maincolor;
+	height: 100px;
+	margin-bottom: 5px;
+		&:after{
+		content: "#{$maincolor}";
+	}
+}
+
+.first_task {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	margin-top: 40px;
+	font-weight: bold;
+	font-size: 16px;
+}
+						/* Первый способ */
+$maincolor: #F44336;
+					/* Делаем светлее с пом. ф-и lighten */
+$colorslight: (
+	50: 38.7%,
+	100: 36%,
+	200: 27%,
+	300: 18%,
+	400: 9%,
+	);
+
+@each $take, $color in $colorslight {
+	.first_task__element1--red--#{$take} {
+		background-color: lighten($maincolor, $color);
+		&:before {
+			content: "#{$take}";
+		}
+		&:after {
+			content: "#{lighten($maincolor, $color)}";
+		}
+	}
+}
+					/* Делаем темнее с пом. ф-и darken */
+$colorsdarknes: (
+	500: 0%,
+	600: 9%,
+	700: 18%,
+	800: 27%,
+	900: 36%
+	);
+
+@each $key, $color in $colorsdarknes {
+	.first_task__element1--red--#{$key} {
+		background-color: darken($maincolor, $color);
+		&:before {
+			content: "#{$key}";
+			color: white;
+		}
+		&:after {
+			content: "#{darken($maincolor, $color)}";
+			color: white;
+
+		}
+	}
+}
+.first_task__element1--red {
+	@include first_task_main_child;
+}
+.first_task__element1 {
+	width: 40%;
+}
+.first_task__element1 > div:not(:first-child) {
+	@include position_first_task_child;
+}
+
+				/* Второй способ */
+
+
+$maincolor: #e91e63;
+
+$colorShiftAmount: (
+  50: 38.7%,
+  100: 36%,
+  200: 27%,
+  300: 18%,
+  400: 9%,
+  500: 0%,
+  600: -9%,
+  700: -18%,
+  800: -27%,
+  900: -36%
+);
+
+@each $key,$color in $colorShiftAmount {
+	.first_task__element2--pink--#{$key} {
+		background-color: adjust-color($maincolor,$lightness: $color);
+		&:before {
+			content: "#{$key}";
+			@if $key >= 500 {
+				color: #fff;
+			}
+		}
+		&:after {
+			content: "#{adjust-color($maincolor,$lightness: $color)}";
+			@if $key >= 500 {
+				color: #fff;
+			}
+		}
+	}
+}
+.first_task__element2--pink {
+	@include first_task_main_child;
+}
+.first_task__element2 {
+	width: 40%;
+}
+.first_task__element2 > div:not(:first-child) {
+	@include position_first_task_child;
+}
+
+@function test_How_work_function($what_color) {
+		$maincolor: $what_color;
+ @return $maincolor; 
+}
+
+									/* Task 2 */
+
+
+$mainColor: test_How_work_function(#CDDC39);
+$secondColor: #448AFF;
+
+.task2_palitra{
+	&__primary{
+		background-color: $mainColor;
+		&:before {
+			content: "#{$mainColor}";	
+		}	
+	}
+$colors: (
+	"dark": -13.9%,
+	"light": 13%,
+);
+	@each $key, $color in $colors {
+		&__#{$key} {
+			background-color: adjust-color($mainColor,$lightness: $color);
+			&:before {
+				content: "#{adjust-color($mainColor,$lightness: $color)}";
+			}
+		}
+	}
+	&__secondary-text{
+		$invert_primary: invert($mainColor);
+		$secondary-text: grayscale($invert_primary);
+		background-color: $secondary-text;
+		color: #fff;
+		&:before {
+			content: "#{$secondary-text}";	
+		}
+		$colors: (
+			"primary-text": -32.8%,
+			"divider-color" : 28.5%
+		);
+		@each $key,$value in $colors {
+			&--#{$key} {
+				background-color: adjust-color($secondary-text, $lightness: $value);
+				color: #fff;
+				&:before {
+					content: "#{adjust-color($secondary-text, $lightness: $value)}";	
+				}
+			}
+		}
+	}
+	&__accent {
+		background-color: $secondColor;
+		color: #fff;
+		&:before {
+			content: "#{$secondColor}";
+		}		
+	}
+
+	
+}
+
+.task2_palitra {
+	width: 90%;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	margin-top: 40px;
+	font-size: 16px;
+}
+.task2_palitra > div {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	width: 25%;
+	height: 100px;
+	text-transform: uppercase;
+}
+.task2_palitra > div:before {
+	padding-bottom: 70px;
+	padding-left: 10px;
+}
+							/* Task 3 */
+$mainSize: 20px;
+
+html {
+	font-size: $mainSize;
+}
+	$anySize: (
+		4: 3rem,
+		3: 2rem,
+		2: 1.5rem,
+		1: 1.2rem,
+		0: 1rem,
+		-1: 0.75rem,
+		-2: 0.56rem,
+		-3: 0.42rem
+		);
+.task3_typografic__some_text {
+
+	@each $key, $size in $anySize {
+		@if ($key >= 0){
+			&--normal--#{$key} {
+				font-size: $size;
+				&:before {
+					content: "#{$size}";
+					padding-right: 10px;
+				}
+			}
+		}
+		@else {
+			&--min-#{$key}{
+				font-size: $size;
+				&:before {
+					content: "#{$size}";
+					padding-right: 10px;
+				}
+			}
+		}
+	}
+}
+				/* Ф-я map-get бере значение от ключа в масиве $anySize  
+				значение value от -3 до 4 (в этом примере)
+				*/
+	@function sizeText($value){
+			@return map-get($anySize,$value); 
+}
+
+								/* Task 4*/
+.task4 {
+	font-size: sizeText(1);
+	width: 70%;
+	max-width: 800px;
+	min-width: 300px;
+	margin: 0 auto;
+	background-color: $mainColor;
+	padding: 5px;
+
+	& span  {
+		display: block;
+		text-indent: 1.5em;
+	}
+}
+.citate {
+	font-style: italic;
+}
+.kod {
+	display:block;
+	padding-left: 20px;
+	white-space: pre;
+}
